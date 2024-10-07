@@ -30,6 +30,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.teal,
+        ),
+        useMaterial3: false,
+      ),
       title: 'Flutter Todo App',
       home: BlocProvider(
         create: (context) => TodoBloc(todoRepository: todoRepository),
